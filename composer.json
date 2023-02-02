@@ -1,32 +1,60 @@
 {
-  "name": "wgx954418992/php-enum",
-  "version": "1.1.5",
-  "description": "The simplest and fastest PHP enumeration, supports `then` matching callback",
+  "name": "wgx954418992/php-baidubce",
+  "description": "BCE SDK for PHP",
   "keywords": [
-    "enum",
-    "php-enum",
-    "rapid-php-enum"
+    "百度云sdk",
+    "baidu",
+    "baidu-bce",
+    "bce",
+    "baidu",
+    "sdk"
   ],
   "type": "library",
-  "homepage": "https://www.rapid-framework.com/",
-  "license": "MIT",
+  "homepage": "https://cloud.baidu.com/doc/Developer/index.html?sdk=php",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "Renew",
       "email": "wgx954418992@qq.com"
+    },
+    {
+      "name": "Baidu BCE",
+      "homepage": "https://bce.baidu.com"
     }
   ],
   "require": {
-    "ext-json": "*"
+    "php": ">=7.0",
+    "ext-json": "*",
+    "guzzle/guzzle": "^3.9"
   },
   "autoload": {
     "files": [],
     "psr-4": {
-      "enum\\": "src/enum/"
+      "BaiduBce\\": "src/BaiduBce/"
     }
   },
   "minimum-stability": "stable",
   "config": {
     "sort-packages": true
+  },
+  "support": {
+    "issues": "https://github.com/baidubce/bce-sdk-php/issues"
+  },
+  "suggest": {
+    "monolog/monolog": "Adds support for logging HTTP requests and responses"
+  },
+  "require-dev": {
+    "monolog/monolog": "^1.26",
+    "phpunit/phpunit": "^7.0"
+  },
+  "scripts": {
+    "extract": [
+      "php -r '$phar = new Phar(\"./BaiduBce.phar\");$result = $phar->extractTo(\"./\",\"src/\",true); echo $result ? \"success\":\"fail\";'"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.9.18-dev"
+    }
   }
 }
