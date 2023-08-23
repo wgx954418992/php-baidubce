@@ -33,7 +33,6 @@
       "BaiduBce\\": "src/BaiduBce/"
     }
   },
-  "minimum-stability": "stable",
   "config": {
     "sort-packages": true
   },
